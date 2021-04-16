@@ -13,11 +13,6 @@ class Dom {
     return this.$el.outerHTML.trim()
   }
 
-  clear() {
-    this.html('')
-    return this
-  }
-
   on(eventType, callback) {
     this.$el.addEventListener(eventType, callback)
   }
@@ -103,6 +98,11 @@ class Dom {
       return this
     }
     this.$el.getAttribute(name)
+  }
+
+  clear() {
+    this.html('')
+    return this
   }
 
   text(text) {
